@@ -1,0 +1,54 @@
+.collection {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+        flex: 0 0 50%;
+        padding: 55px 0;
+        background-position: calc(100% - 40px) bottom;
+        background-size: 190px 171px;
+        background-repeat: no-repeat;
+
+        @include breakpoint (lg) {
+            flex: 0 0 100%;
+        }
+
+        @include breakpoint (xs) {
+            padding: 27px 0 84px;
+            background-position: 100% bottom;
+            background-size: 153px 130px;
+        }
+    }
+
+    &-title {
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @include breakpoint (xs) {
+            font-size: 18px;
+        }
+    }
+
+    &-descr {
+        margin-bottom: 42px;
+        font-weight: 300;
+        font-size: 16px;
+
+        @include breakpoint (xs) {
+            font-size: 12px;
+        }
+    }
+
+    &-man {
+        background-image: url("../img/col-man.png");
+    }
+
+    &-woman {
+        background-image: url("../img/col-wom.png");
+    }
+
+    @include breakpoint (lg) {
+        flex-wrap: wrap;
+    }
+}

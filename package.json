@@ -6,7 +6,7 @@
     "scripts": {
         "slint:fix": "stylelint \"**/*.scss\" --fix",
         "lint": "prettier --check . && eslint .",
-        "lint:fix": "prettier --write . && eslint . --fix"
+        "lint:fix": "prettier --write . && eslint . --fix && stylelint \"**/*.scss\" --fix"
     },
     "author": "",
     "license": "ISC",

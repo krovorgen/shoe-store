@@ -1,0 +1,77 @@
+.title-h2 {
+    margin-top: 48px;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 5.4px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint (xs) {
+        font-size: 28px;
+    }
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    text-align: center;
+
+    &-item {
+        position: relative;
+        flex: 0 0 24%;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 25px;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @include breakpoint (lg) {
+                background-size: 100% 25px;
+            }
+        }
+
+        &::before {
+            background-image: url("../img/top.svg");
+        }
+
+        &::after {
+            background-image: url("../img/bot.svg");
+        }
+
+        @include breakpoint (lg) {
+            flex: 0 0 49%;
+            margin-bottom: 20px;
+        }
+
+        @include breakpoint (xs) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &-title {
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+
+    &-price {
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 18px;
+        color: $button-color;
+    }
+
+    @include breakpoint (lg) {
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint (xs) {
+        margin-bottom: 50px;
+    }
+}
